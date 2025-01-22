@@ -1,7 +1,8 @@
 
 import React from 'react';
-import profileImage from './assets/profile.png';  // Importing the image
-import './Home.css';  // Import the CSS for styling
+import profileImage from './assets/profile.png'; // Importing the profile image
+import './Home.css'; // Import the CSS for styling
+import resumeFile from './assets/resume.pdf'; // Import the resume file
 
 const Home = () => {
   return (
@@ -12,7 +13,10 @@ const Home = () => {
             <h1 className="heading">Welcome to My Portfolio</h1>
             <p className="intro-text">I'm a passionate developer. Explore my work below!</p>
             
-            <a href="#projects" className="btn">View My Projects</a>
+            {/* Updated Button for Resume */}
+            <a href={resumeFile} className="btn" download="My_Resume.pdf">
+              My Resume
+            </a>
           </div>
           <div className="profile-image-container">
             <img src={profileImage} alt="Profile" className="profile-image" />
